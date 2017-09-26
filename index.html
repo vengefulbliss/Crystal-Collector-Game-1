@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Crystal Game</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<link rel ="stylesheet" type="text/css" href="assets/css/style.css">
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div id="container">
+
+			<h1>Crystal Collector!</h1>
+
+			<section id="content">
+				<p>
+				 You will be given a random number at the start of the game.
+				</p>
+
+				<p> 
+					There are four crystals below. By clicking on a crystal you will add aspecific amount of points to your total score.
+				</p>
+
+				<p>
+					You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
+
+				</p>
+
+				<p>
+					The value of each crystal is hidden from you until you click on it.
+
+				</p>
+
+				<p>
+					Each time when the game starts, the game will change the values of each crystal.
+
+				</p>
+
+			</section>
+			
+			<section id="scoring">
+				<div id="randomNumElm">
+				</div>
+
+				<div id="winLoss">
+					<div id="winHTML"></div>
+					<div id="lossHTML"></div>
+				</div>
+
+
+			</section>
+			
+			<section id="gemPanel">
+				<div id="gem1"><button type="button" id="button1">Gem 1!</button></div>
+				<div id="gem2"><button type="button" id="button2">Gem 2!</button></div>
+				<div id="gem3"><button type="button" id="button3">Gem 3!</button></div>
+				<div id="gem4"><button type="button" id="button4">Gem 4!</button></div>
+			</section>
+
+			<section id="totalScorePanel">
+				<p>Your total score is:</p>
+				<p id="userScoreElm"></p>
+			</section>
+
+		</div>
+
+		<script src="assets/javascript/game.js"></script>
+
+	</body>
+
+
+</html>
