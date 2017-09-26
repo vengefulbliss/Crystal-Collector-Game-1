@@ -35,9 +35,11 @@ function randomNumGenerator(num){
 
 function gameSetup(){
 	total =0;
-	target = 5;//randomNumGenerator(26);
-	document.getElementById('randomNumElm').innerHTML=target; 
-	document.getElementById('userScoreElm').innerHTML="Your total score is: " ;
+	target = randomNumGenerator(31);
+	//document.getElementById('randomNumElm').innerHTML=target; 
+	$('#randomNumElm').html(target);
+	//document.getElementById('userScoreElm').innerHTML="Your total score is: " ;
+	$('#userScoreElm').html("Your total score is: ");
 	
 	alreadyChoosenValues =[];
 	
