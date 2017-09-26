@@ -33,9 +33,16 @@ function randomNumGenerator(num){
 	return Math.floor(Math.random()*num);
 }
 
+//Initalize the entire game
 function gameSetup(){
 	total =0;
 	target = randomNumGenerator(31);
+
+	//check to see if the generator picks 0
+	if(target === 0){
+		target = randomNumGenerator(31);
+
+	}
 	//document.getElementById('randomNumElm').innerHTML=target; 
 	$('#randomNumElm').html(target);
 	//document.getElementById('userScoreElm').innerHTML="Your total score is: " ;
