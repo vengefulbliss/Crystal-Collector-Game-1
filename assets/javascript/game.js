@@ -27,6 +27,7 @@ var gem4;
 */
 var gemValues = [1,2,3,4,5];
 var alreadyChoosenValues =[];
+var total =0;
 var win;
 var loss;
 var target;
@@ -38,17 +39,50 @@ function randomNumGenerator(num){
 
 
 target = randomNumGenerator(26);
+target =5;
 
-while (alreadyChoosenValues.length !=5) {
+function gameSetup(){
+while (alreadyChoosenValues.length !=4) {
 	var gemIndex = randomNumGenerator(gemValues.length);
 	var gemRandomNum = gemValues[gemIndex];
 	if(alreadyChoosenValues.indexOf(gemRandomNum) === -1){
 		alreadyChoosenValues.push(gemRandomNum);
 	}
-	
-	console.log(alreadyChoosenValues);
+	//console.log(alreadyChoosenValues); 
+}
+}
+gameSetup();
 
-    
+gem1 = alreadyChoosenValues[0];
+gem2 = alreadyChoosenValues[1];
+gem3 = alreadyChoosenValues[2];
+gem4 = alreadyChoosenValues[3];
+//console.log(gem1,gem2,gem3,gem4);
+
+
+
+function winning(){
+	if(total === target){
+	win = win+1;
+	console.log("win");
+	}
+}
+
+function loss(){
+	if(total > target){
+	console.log("loss");
+	loss = loss+1;
+	}
+}
+
+function check(){
+	if(total < target){
+	console.log("working");
+	}
+}
+
+function startOver(){
+
 }
 
 
@@ -56,41 +90,55 @@ while (alreadyChoosenValues.length !=5) {
 
 
 
-//if(alreadyChoosenValues.indexOf(gemRandomNum) != -1){
-	//gem1 = gemRandomNum;
-	//console.log(gem1);
-	//console.log(alreadyChoosenValues);
-
-//}
-
-
-
-/* pseudo code
-- Randomly create a number the user should guess
-- randomly add values to the gem (1 to 5)
--make sure each gem has a different value
-- when the user clicks to add the gem value to users score
--if the user matches the random computer number value the user wins
--if the use goes over that value then the user losses
-*/
-
-
 //Function
 
 
 //Main
-/*
-$(document).ready(function() {
-	var randomNum = Math.floor(Math.random()*10);
-	console.log(randomNum);
 
+$(document).ready(function() {
+	
       // Here we use jQuery to select the header with "click-me" as its ID.
       // Whenever it is clicked...
-      $("#click-me").on("click", function() {
+      $("#gem1HTML").on("click", function() {
 
         // ... we trigger an alert.
-        alert("I've been clicked!");
+        total = total +gem1;
+        console.log(total);
+        winning();
+        loss();
       });
 
+        $("#gem2HTML").on("click", function() {
+
+        // ... we trigger an alert.
+        total = total +gem2;
+        console.log(total);
+        winning();
+        loss();
+      });
+
+
+         $("#gem3HTML").on("click", function() {
+
+        // ... we trigger an alert.
+        total = total +gem3;
+        console.log(total);
+        winning();
+        loss();
+      });
+
+          $("#gem4HTML").on("click", function() {
+
+        // ... we trigger an alert.
+        total = total +gem4;
+        console.log(total);
+        winning();
+        loss();
+      });
+
+      
+
     });
-    */
+
+console.log(target);
+
