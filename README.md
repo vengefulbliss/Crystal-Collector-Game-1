@@ -23,4 +23,4 @@ This time, though, the player will guess with numbers instead of letters.
    
 **Come and play!**
 
-[](https://media.giphy.com/media/10LKovKon8DENq/giphy.gif)
+![](https://media.giphy.com/media/10LKovKon8DENq/giphy.gif)
