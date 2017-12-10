@@ -23,4 +23,6 @@ This time, though, the player will guess with numbers instead of letters.
    
 **Come and play!**
 
+[Link to Crystal Collector Game](https://zaynaib.github.io/Crystal-Collector-Game/)
+
 ![](https://media.giphy.com/media/10LKovKon8DENq/giphy.gif)
